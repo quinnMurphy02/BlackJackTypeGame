@@ -16,7 +16,7 @@ public class BlackjackTypeGame {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to 21!");
+		System.out.println("Welcome to Blackjack!");
 
 		// create deck we play with
 		Deck playDeck = new Deck();
