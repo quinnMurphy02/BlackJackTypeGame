@@ -22,7 +22,7 @@ public class Card {
 	
 	// return suit and value as string
 	public String toString() {
-		return this.suit.toString() + "-" + this.value.toString();
+		return this.suit.toString() + " OF " + this.value.toString();
 		
 	}
 	// get card value

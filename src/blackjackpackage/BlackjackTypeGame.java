@@ -13,6 +13,9 @@ public class BlackjackTypeGame {
 	// Here is the main class. It will play a game of blackjack with the user. 
 	// It will make two decks, then deal them to the player. It will
 	// ask if they want to hit or stay. It also has a betting feature.
+	// The loop is basically just letting the user (and possibly dealer)
+	// draw, and then we have the big block of if statements for the 
+	// things like checking if there was a push, or if we won. 
 
 	public static void main(String[] args) {
 
@@ -36,9 +39,11 @@ public class BlackjackTypeGame {
 			// play
 
 			System.out.println("You have $" + money + ", how much do you wanna bet?");
+			System.out.println("--------------------------------------------- \n");
 			double bet = input.nextDouble();
 			if (bet > money) {
 				System.out.println("You cannot bet more than you have!!");
+				System.out.println("--------------------------------------------- ");
 				break;
 			}
 			boolean endRound = false;
@@ -54,16 +59,20 @@ public class BlackjackTypeGame {
 
 			while (true) {
 				// print player cards with value of cards method
-				System.out.println("Your cards:");
+				System.out.println("Your cards are:");
 				System.out.print(playerDeck.toString() + "\n");
+				System.out.println("--------------------------------------------- ");
 				System.out.println("Your hand is valued at: " + playerDeck.valueOfCards() + "\n");
+				System.out.println("--------------------------------------------- ");
 
 				// display dealer hand
 				System.out.println("Dealer Hand: " + dealerDeck.getOneCard(0).toString() + " and (hidden)");
+				System.out.println("--------------------------------------------- ");
 				
 				// what does player do?
-				System.out.println("Press 1 to hit!");
-				System.out.println("Press 2 to stand!");
+				System.out.println("Press 1 if you want to hit!");
+				System.out.println("Press 2 if you want to stand!");
+				System.out.println("--------------------------------------------- ");
 				int answer = input.nextInt();
 				
 				// player hits
